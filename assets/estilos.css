@@ -1,0 +1,67 @@
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap');
+
+header, main {
+    background-color: #083224;
+}
+
+h1, 
+a,
+p,
+h2,
+h3  {
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+section{
+    background-color: #d08d57;
+}
+
+nav{
+    position: relative;
+    width: auto;
+}
+
+.menu-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.menu-icon::before {
+    content: "\2630";
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    list-style: none;
+    padding: 20px;
+    transition: right 0.3s ease;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu-toggle:checked + .menu {
+    right: 0;
+}
