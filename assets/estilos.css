@@ -9,11 +9,20 @@ header, main {
     background-color: #083224;
 }
 
+header {
+    min-height: 48px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 h1, 
 a,
 p,
 h2,
-h3  {
+h3, 
+#agendarCita,
+li {
     color: white;
     font-family: 'Playfair Display', serif;
 }
@@ -112,64 +121,160 @@ ul {
     content: "\2630";
 }
 
-.menu {
-    position: fixed;
-    top: 0;
-    right: -200px;
-    width: 200px;
-    height: 100%;
-    background-color: #333;
-    list-style: none;
-    padding: 20px;
-    text-align: center;
-    transition: right 0.3s ease;
-}
-
-.menu li {
-    margin-bottom: 10px;
-}
-
-.menu a {
-    color: #fff;
-    text-decoration: none;
-}
-
 #menu-toggle:checked + .menu {
     right: 0;
 }
 
-main section img {
-    max-width: 100%;
-    margin-top: 0;
-    opacity: 0.50;
-    position: absolute;
-}
-main section h2{
-    position: relative;
-    color: #257e62;
-    text-shadow: 1px 1px white;
-    font-size: 25px;
-    max-width: 350px;
-    margin: 10px;
-    text-align: end;
-    width: 100%;
-    align-items: end;
-    justify-content: end;
-}
-
-main section{
+main #descripcionEmpresa{
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: end;
 }
 
-main p, button {
+main #descripcionEmpresa img {
+    max-width: 100%;
+    margin-top: 0;
+    height: 47%;
+    opacity: 0.30;
+    position: absolute;
+}
+main #descripcionEmpresa h2{
+    position: relative;
+    color: #257e62;
+    text-shadow: 1px 1px black;
+    font-size: 30px;
+    max-width: 350px;
+    margin: 10px;
+    text-align: end;
+    width: 100%;
+}
+
+#agendarCita {
+    border-radius: 10%;
+    border: solid 3px #843bf1;
+    width: 120px;
+    height: 40px;
+    color: white;
+    background-color: #5e2bab;
+    align-self: center;
+    margin: 10px;
+    text-align: center;
     z-index: 10;
-    
 }
 
+#descripcionEmpresa p {
+    text-shadow: 1px 1px black;
+    padding-right: 10px;
+    z-index: 10;
+    text-align: end;
+}
 
+#quienesSomos {
+    height: 700px;
+    background-color: white;
+}
+
+#quienesSomos h3 {
+    color: #843bf1;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#quienesSomos p {
+    text-align: center;
+    padding: 20px;
+    color: #000;
+}
+
+#nuestrosServicios {
+    width: 85%;
+    height: 1400px;
+    background-color: #d08d57;
+    position: sticky;
+    left: 25px;
+    margin-bottom: 35px;
+}
+
+#nuestrosServicios h2 {
+    text-align: center;
+    padding: 20px 15px;
+    font-size: 35px;
+}
+
+#nuestrosServicios div{
+    background-color: #5e2bab;
+    width: 85%;
+    margin: 15px;
+    padding: 10px 10px;
+}
+
+#nuestrosServicios h3 {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#nuestrosServicios p{
+    text-align: center;
+    font-size: 15px;
+    padding: 0 15px 0 15px;
+}
+
+#testimonios {
+    background-color: #5e2bab;
+    padding: 15px;
+}
+
+#testimonios h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+#testimonioUno {
+    background-color: #37a985;
+    display: flex;
+    flex-direction: column;
+    border: solid 5px #37a985;
+    margin: 20px 15px;
+}
+
+#testimonioDos {
+    background-color: #37a985;
+    display: flex;
+    flex-direction: column;
+    border: solid 5px #37a985;
+    margin: 20px 15px;
+}
+
+#testimonioUno p{
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+#testimonioDos p{
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+#contactanos {
+    background-color: #194235;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+#contactanos h3, #contactanos p, #contactanos ul {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 25px;
+}
 
 @media (min-width: 768px) {
     .respmenu nav{
@@ -181,32 +286,286 @@ main p, button {
     }
     .respmenu a, li, ul {
         color: white;
+        font-size: 30px;
         text-decoration: none;
         justify-content: center;
         text-align: center;
         align-items: center;
         padding: 10px 20px;
-        border-bottom: 2px solid #194235;
         background: #194235;
-        font-variant: small-caps;
         text-shadow: 1px 1px black;
     }
     .menu-icon, input {
         display: none;
     }
     .respmenu h1{
-        justify-content: center;
         padding-top: 15px;
         align-items: center;
         text-align: center;
+        font-size: 100px;
+    }
+    main #descripcionEmpresa{
+        height: 700px;
+    }
+    main #descripcionEmpresa img {
+        max-width: 100%;
+        margin-top: 0;
+        height: 52%;
+        opacity: 0.30;
+        position: absolute;
+    }
+    main #descripcionEmpresa h2{
+        position: relative;
+        color: #194235;
+        text-shadow: 1px 1px black;
+        font-size: 70px;
+        max-width: 980px;
+        height: 400px;
+        text-align: end;
+    }
+    
+    #agendarCita {
+        border-radius: 10%;
+        border: solid 3px #843bf1;
+        width: 400px;
+        height: 80px;
+        color: white;
+        background-color: #5e2bab;
+        align-self: center;
+        margin: 10px;
+        margin-bottom: 50px;
+        text-align: center;
+        z-index: 10;
+        font-size: 30px;
+    }
+    
+    #descripcionEmpresa p {
+        padding-right: 40px;
+        font-size: 35px;
+    }
+    
+    #quienesSomos {
+        height: 1000px;
+    }
+    
+    #quienesSomos h3 {
+        width: 100%;
+        color: #843bf1;
+        text-align: center;
+        padding: 20px;
+        font-size: 60px;
+    }
+    #descripciones{
+        display: flex;
+    }
+    #quienesSomos p {
+        text-align: center;
+        padding: 50px;
+        color: #000;
+        font-size: 30px;
+    }
+    
+    #nuestrosServicios {
+        width: 95%;
+        height: 1500px;
+    }
+
+    #nuestrosServicios h2 {
+        font-size: 60px;
+    }
+    
+    #nuestrosServicios div{
+        margin: 60px;
+    }
+    
+    #nuestrosServicios h3 {
+        font-size: 35px;
+    }
+    
+    #nuestrosServicios p{
+        font-size: 25px;
+        padding: 0 15px 0 15px;
+    }
+    
+    #testimonios {
+        padding: 50px;
+    }
+    
+    #testimonios h2 {
+        font-size: 60px;
+    }
+    
+    #testimonioUno {
+        margin: 40px 25px;
+    }
+    
+    #testimonioDos {
+        margin: 40px 25px;
+    }
+    
+    #testimonioUno p{
+        padding: 25px;
+        font-size: 35px;
+    }
+    
+    #testimonioDos p{
+        padding: 25px;
+        font-size: 35px;
+    }
+
+    #testimonioUno img, #testimonioDos img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        align-self: center;
+        margin-top: 30px;
+    }
+    
+    #contactanos {
+        height: 700px;
+    }
+    
+    #contactanos h3, #contactanos p, #contactanos ul {
+        font-size: 35px;
     }
 }
 
  
 
 @media (min-width: 1200px) {
-    body {
-      font-size: 18px;
-      color: blue;
+    .respmenu h1{
+        padding-top: 15px;
+        align-items: start;
+        text-align: start;
+        font-size: 50px;
     }
-  }
+
+    #menu {
+        position: relative;
+    }
+    main #descripcionEmpresa{
+        height: 700px;
+    }
+    main #descripcionEmpresa img {
+        max-width: 100%;
+        margin-top: 0;
+        height: 52%;
+        opacity: 0.30;
+        position: absolute;
+    }
+    main #descripcionEmpresa h2{
+        position: relative;
+        color: #194235;
+        text-shadow: 1px 1px black;
+        font-size: 70px;
+        max-width: 980px;
+        height: 400px;
+        text-align: end;
+    }
+    
+    #agendarCita {
+        border-radius: 10%;
+        border: solid 3px #843bf1;
+        width: 400px;
+        height: 80px;
+        color: white;
+        background-color: #5e2bab;
+        align-self: center;
+        margin: 10px;
+        margin-bottom: 50px;
+        text-align: center;
+        z-index: 10;
+        font-size: 30px;
+    }
+    
+    #descripcionEmpresa p {
+        padding-right: 40px;
+        font-size: 35px;
+    }
+    
+    #quienesSomos {
+        height: 1000px;
+    }
+    
+    #quienesSomos h3 {
+        width: 100%;
+        color: #843bf1;
+        text-align: center;
+        padding: 20px;
+        font-size: 60px;
+    }
+    #descripciones{
+        display: flex;
+    }
+    #quienesSomos p {
+        text-align: center;
+        padding: 50px;
+        color: #000;
+        font-size: 30px;
+    }
+    
+    #nuestrosServicios {
+        width: 95%;
+        height: 1500px;
+    }
+
+    #nuestrosServicios h2 {
+        font-size: 60px;
+    }
+    
+    #nuestrosServicios div{
+        margin: 60px;
+    }
+    
+    #nuestrosServicios h3 {
+        font-size: 35px;
+    }
+    
+    #nuestrosServicios p{
+        font-size: 25px;
+        padding: 0 15px 0 15px;
+    }
+    
+    #testimonios {
+        padding: 50px;
+    }
+    
+    #testimonios h2 {
+        font-size: 60px;
+    }
+    
+    #testimonioUno {
+        margin: 40px 25px;
+    }
+    
+    #testimonioDos {
+        margin: 40px 25px;
+    }
+    
+    #testimonioUno p{
+        padding: 25px;
+        font-size: 35px;
+    }
+    
+    #testimonioDos p{
+        padding: 25px;
+        font-size: 35px;
+    }
+
+    #testimonioUno img, #testimonioDos img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        align-self: center;
+        margin-top: 30px;
+    }
+    
+    #contactanos {
+        height: 700px;
+    }
+    
+    #contactanos h3, #contactanos p, #contactanos ul {
+        font-size: 35px;
+    }
+    
+}
