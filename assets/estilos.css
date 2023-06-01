@@ -308,11 +308,8 @@ main #descripcionEmpresa h2{
         height: 700px;
     }
     main #descripcionEmpresa img {
-        max-width: 100%;
-        margin-top: 0;
-        height: 52%;
-        opacity: 0.30;
-        position: absolute;
+        width: 100%;
+        height: 68%;
     }
     main #descripcionEmpresa h2{
         position: relative;
@@ -443,24 +440,37 @@ main #descripcionEmpresa h2{
     #menu {
         position: relative;
     }
+    .respmenu a, li, ul {
+        font-size: 20px;
+        padding: 0px 5px;
+        padding-top: 7px;
+    }
+
+    .respmenu {
+        position: relative;
+        height: 96px;
+    }
+
+    .respmenu ul {
+        position: absolute;
+        top: -97px;
+        right: 0;
+    }
+
     main #descripcionEmpresa{
-        height: 700px;
+        height: 900px;
     }
     main #descripcionEmpresa img {
-        max-width: 100%;
-        margin-top: 0;
-        height: 52%;
-        opacity: 0.30;
-        position: absolute;
+        width: 100%;
+        height: 100%;
     }
     main #descripcionEmpresa h2{
-        position: relative;
         color: #194235;
-        text-shadow: 1px 1px black;
         font-size: 70px;
-        max-width: 980px;
+        max-width: 1500px;
         height: 400px;
-        text-align: end;
+        text-align: end;;
+        z-index: 10;
     }
     
     #agendarCita {
